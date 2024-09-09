@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "singularName": "store",
+    "pluralName": "stores",
+    "displayName": "store",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "storeID": {
+      "type": "uid",
+      "required": true
+    },
+    "shopImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "serviceAvailable": {
+      "type": "boolean",
+      "default": true
+    },
+    "intro": {
+      "type": "text"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "reservations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reservation.reservation",
+      "mappedBy": "store"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "store"
+    },
+    "wash_pricings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::wash-pricing.wash-pricing",
+      "mappedBy": "store"
+    },
+    "dry_pricings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dry-pricing.dry-pricing",
+      "mappedBy": "store"
+    }
+  }
+}

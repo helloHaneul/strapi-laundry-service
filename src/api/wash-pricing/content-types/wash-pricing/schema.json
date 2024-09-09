@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wash_pricings",
+  "info": {
+    "singularName": "wash-pricing",
+    "pluralName": "wash-pricings",
+    "displayName": "WashPricing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "washerType": {
+      "displayName": "priceOnType",
+      "type": "component",
+      "repeatable": true,
+      "component": "prices.price-on-type"
+    },
+    "description": {
+      "type": "text"
+    },
+    "washCourse": {
+      "type": "enumeration",
+      "enum": [
+        "quick",
+        "default",
+        "advanced",
+        "sensitive",
+        "blanket"
+      ]
+    },
+    "time": {
+      "type": "integer"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::store.store",
+      "inversedBy": "wash_pricings"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

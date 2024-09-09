@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_prices_dry_modes",
+  "info": {
+    "displayName": "dryMode",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "temp": {
+      "type": "string"
+    }
+  }
+}

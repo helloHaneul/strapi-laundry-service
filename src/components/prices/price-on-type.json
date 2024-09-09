@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_prices_price_on_types",
+  "info": {
+    "displayName": "priceOnType",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "price": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "medium",
+        "large",
+        "extraLarge"
+      ]
+    }
+  }
+}

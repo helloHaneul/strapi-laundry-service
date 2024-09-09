@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dry_pricings",
+  "info": {
+    "singularName": "dry-pricing",
+    "pluralName": "dry-pricings",
+    "displayName": "DryPricing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "integer"
+    },
+    "drierType": {
+      "type": "enumeration",
+      "enum": [
+        "large",
+        "extraLarge"
+      ]
+    },
+    "mode": {
+      "displayName": "dryMode",
+      "type": "component",
+      "repeatable": true,
+      "component": "prices.dry-mode"
+    },
+    "store": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::store.store",
+      "inversedBy": "dry_pricings"
+    },
+    "description": {
+      "type": "text"
+    },
+    "time": {
+      "type": "integer"
+    }
+  }
+}
